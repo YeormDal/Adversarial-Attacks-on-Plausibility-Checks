@@ -1,0 +1,26 @@
+data_root: C:\v2x_repro\data\veremi
+resample_hz: 10
+
+l1:
+  tau_v: 0.5
+  tau_a: 1.0
+  tau_j: 2.0
+
+l2:
+  kappa: 0.5
+  eps_v: 0.1
+
+attack:
+  epsilon: 0.1
+  K: 5
+  jerkCap: 2.0
+  T0: 3.0
+  rollback: 0.7
+  dt: 0.1
+
+split:
+  train: [S0, S1, S2, S5]
+  val: [S3]
+  test: [S4]
+
+seed: 42

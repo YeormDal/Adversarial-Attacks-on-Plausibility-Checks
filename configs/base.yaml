@@ -24,3 +24,19 @@ split:
   test: [S4]
 
 seed: 42
+
+plausibility:
+  dt: 0.1         # 10 Hz 샘플링 간격 (초)
+  eps_v: 0.05     # 0 속도 근처 수치불안정 보호 임계값 (m/s)
+  tau_v: 0.5      # |Δv| 제한 (프레임간 속도 변화량 기반)
+  tau_a: 1.0      # |a| L1 임계값 (m/s^2)
+  tau_j: 2.0      # |jerk| L1 임계값 (m/s^3)
+  kappa: 0.5      # |a_lat - v*r| L2 허용오차 (m/s^2)
+
+  # NOTE: 데이터 컬럼명 매핑(필요 시 수정)
+  col_time: t
+  col_track: id
+  col_v: v
+  col_a: a
+  col_r: r
+  col_alat: alat
